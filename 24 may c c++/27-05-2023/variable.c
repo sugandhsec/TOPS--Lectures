@@ -5,7 +5,7 @@ int main()
     _signed = 458; // variable initialization
     _signed = 214;
     float weight;
-    float 7fdhgtht; //wrong variablename
+    // float 7fdhgtht; //wrong variablename
     float first_name;
 
     return 0;
