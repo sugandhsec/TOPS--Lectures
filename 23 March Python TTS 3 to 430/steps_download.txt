@@ -1,0 +1,29 @@
+Python is a Programming language as well as scripting language
+
+Steps to download python
+
+Go to Google---->search(Download Python)--->Go to Download
+ sdection->>>>click on download in which python version is given
+
+click on download file---->>>>check both the option at bottom of file 
+add path----->after checking both option click on install now
+
+OVER
+
+--------------------------------------------------------------------------------------------
+go to google--->>search anaconda distribution download----->
+click on first link anaconda distribution--->scroll click on download button
+---->click on file and run the setup ---->installtion complete
+
+
+snargrme    :   Sugandh Gupta
+Age        :   33
+
+NAddgrgrggggrgrgme	:	Sugandh Gupta
+Age	:	26
+
+
+
+
+
+

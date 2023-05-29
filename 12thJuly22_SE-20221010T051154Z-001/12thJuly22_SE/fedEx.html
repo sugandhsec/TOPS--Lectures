@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+        background-color: bisque;
+      }
+      .header {
+        background-color: purple;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .navbar {
+        width: 82%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+      }
+      .nav {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        font-size: 20px;
+      }
+      .search {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+      .user {
+        list-style: none;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .usericon {
+        font-size: 24px;
+      }
+      .logo {
+        font-size: 26px;
+      }
+      .desp {
+        width: 90%;
+        margin: 0 auto;
+        height: calc(100vh - 72px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        align-items: center;
+      }
+      .desp h2 {
+        font-size: 56px;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        /* gap: 20px; */
+      }
+      .box ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 20px;
+        list-style: none;
+      }
+      .logo1 {
+        font-size: 40px;
+      }
+      .b1,
+      .b3 {
+        height: 175px;
+        width: 200px;
+        background-color: white;
+        color: black;
+      }
+      .b2 {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+        color: white;
+      }
+      .tracking {
+        display: flex;
+      }
+      .tracking input {
+        border: none;
+        font-size: 20px;
+        padding: 20px 140px 20px 20px;
+      }
+      .btn {
+        padding: 20px 30px;
+        background-color: orangered;
+        color: white;
+        border: none;
+        font-size: 20px;
+      }
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="navbar">
+          <div class="logo">
+            <h2>FedEx</h2>
+          </div>
+          <ul class="nav">
+            <li>Shipping</li>
+            <li>Tracking</li>
+            <li>Design & Print</li>
+            <li>Locations</li>
+            <li>Support</li>
+          </ul>
+          <ul class="search">
+            <ul class="user">
+              <li>Sign Up or Log in</li>
+              <li class="usericon"><i class="fa-regular fa-user"></i></li>
+            </ul>
+            <li class="usericon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="desp">
+        <h2>Ship, Manage, Track, Deliver</h2>
+        <div class="box">
+          <ul class="b1">
+            <li class="logo1"><i class="fa-solid fa-box-open"></i></li>
+            <li>RATE & SHIP</li>
+          </ul>
+          <ul class="b2">
+            <li class="logo1"><i class="fa-solid fa-box-open"></i></li>
+            <li>TRACK</li>
+          </ul>
+          <ul class="b3">
+            <li class="logo1"><i class="fa-solid fa-location-dot"></i></li>
+            <li>LOCATIONS</li>
+          </ul>
+        </div>
+        <div class="bottom">
+          <div class="tracking">
+            <input type="text" placeholder="TRACKING ID" />
+            <button class="btn">TRACK</button>
+          </div>
+          <p>MULTIPLE TRACKING NUMBERS | NEED HELP?</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

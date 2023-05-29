@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section p{
+            color: red;
+        }
+        div>p{
+            color: blue;
+        }
+        div > h2{
+            color: rgb(255, 0, 170);
+        }
+        /* h1~p{
+            color: aqua;
+        } */
+        h1+p{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ipsam.</p>
+        <h1>Hello</h1>
+        <h2>world</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ipsam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ipsam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ipsam.</p>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, consequatur incidunt iure inventore blanditiis, non cum quidem dolor perferendis error voluptas ratione molestias expedita porro ab laboriosam, obcaecati tempore placeat.</p>
+        </section>
+        <h2>World</h2>
+    </div>
+</body>
+</html>

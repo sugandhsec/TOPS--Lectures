@@ -1,0 +1,6 @@
+This is a data 
+which you ant to
+see
+so this
+is visible 
+in read mode

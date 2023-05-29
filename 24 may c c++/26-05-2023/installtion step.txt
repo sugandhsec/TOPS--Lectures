@@ -1,0 +1,59 @@
+VS CODE----download from google
+
+now start installation----click next next
+untill---additional task option is visible---
+
+then select all additional task---
+the again click next and nect and installation complete
+
+
+on vs code left menu
+there is one option "Extension " click on that
+then on search box
+search----code runner
+then click on jun han version---
+then click on install---anfd your extension is install
+
+on left menu click on manage
+
+inside manage click on settings
+
+on setting search box---search ----run in terminal
+
+scroll and select ---code-runner:run in terminal
+click that chekcbox
+
+---------------------------------------------------------------------
+Compiler
+ on google search----mingw compiler
+click on webiste that shows
+
+sourceforge.net  minmalist GNU for windows
+
+run the setup---and install it
+
+on windows sarech-----mingw installation manager
+
+open it
+
+then select 3 opetions
+mingw32-base
+mingw32-gcc-g++
+mingw32-gcc-objc
+
+then click on top first installtion button
+then click on apply changes option
+finally close it
+-------------------------------------------------------------------
+path set
+
+
+got to c drive---go to minGW folder---goto bin folder---
+on top--right click and copy address
+
+----right click --this pc---goto properties at bottom--
+goto advance system setting---goto down-
+environment variables click--
+on top 5 --double click on path option
+click on new---and paste the copied path--
+ok---ok---ok---complete

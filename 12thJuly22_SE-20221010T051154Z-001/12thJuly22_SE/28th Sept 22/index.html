@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+        /* background-color: aqua; */
+        background-image: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.407);
+        background-blend-mode: overlay;
+      }
+      .navbar {
+        width: 80%;
+        /* background-color: bisque; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+      }
+      .navbar h2 {
+        font-size: 34px;
+        color: orangered;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .navbar ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1.2px;
+      }
+      .search {
+        display: flex;
+        border: 2px solid orangered;
+        border-radius: 4px;
+      }
+      .search input {
+        padding: 4px 10px;
+        border: none;
+        background-color: transparent;
+        color: white;
+      }
+      .btn1 {
+        padding: 4px 12px;
+        background-color: orangered;
+        font-size: 14px;
+        color: white;
+        border: none;
+      }
+      .desp {
+        width: 90%;
+        margin: 0 auto;
+        height: calc(100vh - 66px);
+        /* background-color: aqua; */
+        display: flex;
+      }
+      .left {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .left h2 {
+        width: 70%;
+        font-size: 44px;
+        letter-spacing: 1.6px;
+      }
+      .left span {
+        font-size: 54px;
+        color: rgb(255, 98, 0);
+      }
+      .left p {
+        width: 80%;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 24px;
+      }
+      .btn2 {
+        padding: 7px 42px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(255, 85, 0);
+        letter-spacing: 1px;
+        margin-left: 10px;
+        color: black;
+      }
+      .right {
+        width: 35%;
+      }
+      .box {
+        width: 75%;
+        margin-left: 60px;
+        padding: 24px 0px;
+        margin-top: 50px;
+        background-color: rgba(0, 0, 0, 0.733);
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 12px;
+      }
+      .btn3 {
+        padding: 5px 22px;
+        width: 75%;
+        background-color: white;
+        color: rgb(255, 77, 0);
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        border: none;
+        border-radius: 8px;
+      }
+      .box input {
+        width: 85%;
+        border: none;
+        padding: 6px 5px;
+        background-color: transparent;
+        border-bottom: 2px solid orangered;
+      }
+      .btn4 {
+        padding: 7px 32px;
+        font-size: 15px;
+        letter-spacing: 1.1px;
+        background-color: orangered;
+        border: none;
+        width: 80%;
+        border-radius: 10px;
+        color: black;
+        margin-top: 10px;
+      }
+      .box p {
+        width: 80%;
+        text-align: center;
+      }
+      .signup {
+        color: red;
+        margin-left: 30px;
+      }
+      .box ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        gap: 14px;
+        font-size: 22px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <h2>Praroz</h2>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Service</li>
+          <li>Design</li>
+          <li>Contact</li>
+        </ul>
+        <div class="search">
+          <input type="text" name="" id="" placeholder="Type to Search"/>
+          <button class="btn1">Search</button>
+        </div>
+      </div>
+      <div class="desp">
+        <div class="left">
+          <h2>Web Design & <span>Development</span> Course</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+            ex est velit quia omnis, enim hic, distinctio numquam, voluptatem
+            excepturi culpa blanditii
+          </p>
+          <button class="btn2">JOIN US</button>
+        </div>
+        <div class="right">
+          <div class="box">
+            <button class="btn3">Login Here</button>
+            <input type="text" placeholder="Enter Email Here"/>
+            <input type="text" placeholder="Enter Password Here"/>
+            <button class="btn4">Login</button>
+            <p>
+              Don't have an account? <span class="signup">Sign Up</span> here
+            </p>
+            <p>Log in with</p>
+            <ul>
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+              <li><i class="fa-brands fa-twitter"></i></li>
+              <li><i class="fa-brands fa-google"></i></li>
+              <li><i class="fa-brands fa-skype"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

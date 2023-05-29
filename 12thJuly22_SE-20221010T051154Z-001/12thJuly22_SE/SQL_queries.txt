@@ -1,0 +1,261 @@
+SQL processes and statements
+=> Differenciate into 4 categories
+
+1. DDL (Data defination language)
+2. DML (Data Manipulation language)
+3. DCL (Data control language)
+4. DQL (Data Queried language)
+
+------------------------------------------------------------------------------------------------
+
+(I) DDL (DAta Defination language)
+
+- Main task is to just start the process based on the structure
+- works with database and tables structure, not with the data
+
+------------ For create database --------------
+create database mycollage;
+
+------------ For Use any Database ----------------
+use mycollage;
+
+------------ To create table ----------------
+create table course(
+	courseID int auto_increment,
+    coursename varchar(50),
+    totalyear int ,
+    totalfees int,
+    primary key(courseID)
+);
+create table student(
+    studentID int auto_increment,
+    student_name varchar(100),
+    student_email varchar(50),
+    student_address varchar(200),
+    student_city varchar(20),
+    student_mobile varchar(50),
+    student_blood_group varchar(20),
+    student_gender varchar(20),
+    courseID int,
+    primary key (studentID),
+    foreign key(courseID) references course(courseID)
+); 
+create table subject(
+	subjectID int auto_increment,
+    subject_name varchar(50),
+    primary key(subjectID)
+);
+
+
+create table faculty (
+	facultyID int auto_increment,
+    facultyName varchar(50),
+    facultyEmail varchar(50),
+    facultymobile varchar(50),
+    subjectID int,
+    primary key (facultyID) ,
+    foreign key(subjectID) references subject(subjectID)
+); 
+
+------------ Alter / Modify Table -----------------
+alter table faculty add address varchar(100);
+alter table faculty modify address varchar(200);
+alter table faculty drop address;
+alter table faculty rename faculty_name;
+
+
+
+
+(II) DML: Data manipulation language(manipulate data)
+
+1. Insert (Use to insert command into the table)
+2. Update (Use to modify the data)
+3. Delete (Use to delete records from table)
+
+------------- Insert data into table ------------------
+insert into course(coursename,totalyear,totalfees) values ('bba',3,35000);
+insert into course(coursename,totalyear,totalfees) values ('bca',3,55000);
+insert into course(coursename,totalyear,totalfees) values ('b.tech',4,135000);
+insert into course(coursename,totalyear,totalfees) values ('bcom',3,65000);
+insert into course(coursename,totalyear,totalfees) values ('mscit',4,505000);
+
+insert into subject(subject_name) values('pl/sql');
+insert into subject(subject_name) values('c/c++');
+insert into subject(subject_name) values('html/css');
+insert into subject(subject_name) values('.netcore');
+insert into subject(subject_name) values('java');
+
+
+insert into faculty(facultyName,facultyEmail,facultymobile,subjectID) values('artimadam','arti02@gmail.com','9825012398',1),
+('kaushalsir','kaushal@gmail.com','9825012598',3),
+('chintansir','chintan@gmail.com','9825012098',2),
+('ankitsir','ankit@gmail.com','9895012398',4),
+('neelsir','neel@gmail.com','9823012398',5);
+
+insert into student (student_name,student_email,student_city,student_mobile,student_blood_group,student_gender,courseID) 
+values('jenees','jenees@gmail.com','surat','9873563212','o+','male','2'),
+('jenni','jenni@gmail.com','surat','9874563612','a+','female','1'),
+('bhavik','bhavik@gmail.com','bharuch','9874563912','b+','male','4'),
+('neel','neel@gmail.com','mumbai','9874523212','ab+','female','3'),
+('rishi','rishi@gmail.com','vapi','9874593212','o+','male','5');
+
+
+
+(III) DQL: (Data Queried language)
+
+- Just one command SELECT
+
+------------- To Read / Select data from the table ----------------
+
+select *from student;
+select student_name,student_blood_group  from student;
+select student_name as name,student_blood_group as blood  from student;
+select distinct student_city from student;
+select student_name,student_blood_group from student where student_city='surat';
+select *from course where totalfees < 35000;
+select *from student where student_name like 'j%';
+select *from student where student_name like '%j';
+select *from student where student_name like '%e%';
+select *from student where student_name like 's_';
+select *from student order by student_name asc;
+select *from student order by student_name desc;
+select student_name,courseID from student order by student_name asc;
+select student_name,courseID from student order by student_name desc;
+select count(*),student_city from student group by student_city;
+
+select * from student where student_city in('surat','bharuch');
+
+select student_name from student where courseID in (select courseID from course where courseID <=2); 
+select student_name from student where courseID in (1,2,5);
+select * from student where student_name in(select student_name from student where student_name like 'j%');
+select * from student where student_name not in(select student_name from student where student_name like 'j%');
+
+select student.student_name,course.coursename from student inner join course on student.courseID=course.courseId;
+select student.student_name,course.coursename from student left join course on student.courseID=course.courseId;
+select student.student_name,course.coursename from student inner join course on student.courseID=course.courseId;
+
+select count(student_city)as city,student_city from student group by student_city;
+select avg(totalfees) as total from course;
+select max(totalfees) as fees from course;
+select ucase(student_name) from student;
+select mid(student_name,1,4) from student;
+select now(),student_name from student;
+select date_format(now(),"%d-%m-%y %h-%i-%r"),student_name from student;
+
+
+
+(IV) DCL - Data control language
+
+- It will apply on All DML commands, means Any insert, update and delete operation 
+- It will reverse all the queries
+
+Commit and RollBack are the commands which are use for this
+
+--------------------------- Syntax ----------------------------
+Start transaction;
+delete from student where studentID = 2;
+update student set student_name = 'Bhavik' where studentID = 3;
+
+rollback;
+---------------------------------------------------------------
+
+The above rollback operation is works only on the dml operation means if you insert,update and delete anything in the database then it will reverse or undo the operation of that and it will works 
+but if you do other operation like the addition of the row and column in the database then it will not works
+
+----------------------------- Syntex for Commit --------------------------
+Start transaction;
+delete from student where studentID = 2;
+update student set student_name = 'Bhavik' where studentID = 3;
+
+commit;
+  
+rollback;
+--------------------------------------------------------------------------
+
+- Now we will put commit between start transaction and the rollback function, then just run the commit statement 
+- After run of commmit statement, the rollback run but the undo operation is not done and data will remains the unchanged. 
+
+-------------------- Savepoint --------------------------------
+Start transaction;
+delete from student where studentID = 2;
+savepoint a;
+update student set student_name = 'Bhavik' where studentID = 3;
+
+commit;
+  
+rollback to a;
+-----------------------------------------------------------------
+
+-------------------------------------------VIEW-----------------------------------------
+when data is to much populate after sometime then  we had to create view to hide some data.
+
+- create view <viewname> AS{ SELECT 'name' FROM 'emp'}
+
+
+------------------------------------------TRIGGERS------------------------------------------
+
+-> It is set of SQL statement stored in the database catelog (Special type of store procedure)
+-> It will triggers itself when insert,update or delete operation takes place
+-> It will works like before and after events means, before insert/after insert,before/after delete,before/after update.
+
+ex. 
+DELIMITER $$
+
+CREATE 
+TRIGGER <database name><trigggered table name> BEFORE DELETE
+ON <database name><from which table>
+FOR EACH ROW BEGIN
+INSERT INTO emp_log(id,name,email,dept,sal) VALUES (old.id,old.name,old.email.old.dept,old.sal)
+END$$
+
+DELIMITER;
+
+-------------------------------------- STORE PROCEDURE -----------------------------------------
+
+-> A store procedure is a database object
+-> It is a series of declarative statements
+-> It can be stored in the database and we can reuse it when we require that specific group of statements again
+-> We can also pass the parameters in the store procedure
+-> SQL servers create execution plan and stores it in cache
+
+
+===> To create any store procedure following syntax would be used,
+
+------------------ without parameter -------------------------
+DELIMITER //
+create procedure pro1()
+begin
+insert into subject(subject_name) values('php'),('html'),('node js');
+select *from subject;
+end;
+
+call pro1;
+---------------------------------------------------------------
+
+===> Parameters in the procedure
+
+-> You can also make a dynamic procedure which is works on the parameters which are pass to that when  it is created
+-> you can pass the parameters in the procedure block before AS keyword
+-> parameters pass in the procedure with using @ symbol before the name of parameter and after parameter name mention the respective datatypes of that perticular parameter
+
+-------------------- IN parameter -------------------------
+DELIMITER //
+create procedure insertproce(in sname varchar(50))
+begin
+insert into subject(subject_name) values(sname);
+select *from subject;
+end;
+
+call insertproce('ios');
+------------------------------------------------------------
+
+-------------------- OUT parameter -------------------------
+DELIMITER //
+create procedure outproce(out sname varchar(50))
+begin
+select subject_name into sname from student where studentId = 2;
+end;
+
+call outproce(@sname);
+select @sname;
+------------------------------------------------------------
