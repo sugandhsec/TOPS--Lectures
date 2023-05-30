@@ -23,6 +23,7 @@ when we know only condition but not the number of time
 
 do while loop
 
+DRY--Don't Repeat Yourself
 
 
 */
