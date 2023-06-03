@@ -1,0 +1,14 @@
+1-Addition
+2-Subtraction
+3-Division
+4-Multiplication
+
+
+Enter Your choice: 2
+Enter Number1:58 
+Enter Number 2: 23
+Answer=35
+
+enter calculation:
+25+36
+answer=61

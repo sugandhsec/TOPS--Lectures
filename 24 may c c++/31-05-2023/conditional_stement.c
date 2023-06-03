@@ -40,4 +40,29 @@ else
     what do do when condition is flase
 }
 
+//ladder if else
+
+if(condition1)
+{
+    body of if
+}
+else if(condition2)
+{
+    body of condition 2
+}
+else if(condition3)
+{
+    body of condition3
+}
+.
+.
+.
+.
+.
+.
+else
+{
+    what to do  when not a single condition is true
+}
+
 */
