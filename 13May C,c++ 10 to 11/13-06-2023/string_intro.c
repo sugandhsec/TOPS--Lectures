@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    char name[50];
+    char name[50]="grgrhgr";
     int age, mobile;
     printf("Enter Age: ");
     scanf("%d", &age);
