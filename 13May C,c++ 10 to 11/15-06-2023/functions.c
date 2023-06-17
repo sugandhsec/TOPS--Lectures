@@ -1,15 +1,16 @@
 #include <stdio.h>
 // void greet(); // function declaration
-void greet()  // function definition
+void greet() // function definition
 {
     for (int i = 0; i < 10; i++)
     {
         printf("good Morning\n");
     }
 }
+
 int main()
 {
-    greet(); //function Calling
+    greet(); // function Calling
     // greet();
     return 0;
 }

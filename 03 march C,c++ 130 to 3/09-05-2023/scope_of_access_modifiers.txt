@@ -1,5 +1,0 @@
-            within class   child class     main function
-
-public          yes             yes             yes 
-protected       yes             yes             no  
-private         yes             no              no
