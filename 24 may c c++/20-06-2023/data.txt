@@ -1,5 +1,4 @@
 user given num of student --- 5
-
 rollno
 name
 age
