@@ -9,7 +9,7 @@ int main()
     char name[50];
     printf("Enter number of students: ");
     scanf("%d", &num);
-    FILE *fp;
+    FILE *fp; 
     fp = fopen("Student_data.xls", "w");
     fprintf(fp, "rollno\tage\tmobile\tname\th\t m\t e\t s\t g\t total\tpercent\t grade\n");
     for (int i = 1; i <= num; i++)
