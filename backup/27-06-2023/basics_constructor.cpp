@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-class demo
+class demo  //encapsdulation
 {
 public:
     int rollno;
