@@ -3,9 +3,8 @@ using namespace std;
 class A // abstract class
 {
 public:
-    virtual void demo() // pure virtual function
-    {
-    }
+    virtual void demo() = 0; // pure virtual function
+
     void show()
     {
         cout << "i am show function of A class";
@@ -19,7 +18,6 @@ public:
         cout << " i am function of B class ";
     }
     // show();
-    
 };
 int main()
 {

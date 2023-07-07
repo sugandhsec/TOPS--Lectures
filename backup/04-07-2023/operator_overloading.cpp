@@ -8,7 +8,7 @@ public:
     {
         cout << "Value of a is " << a << endl;
     }
-    void operator+(demo t)
+    void operator-(demo t)
     {
        cout<<a+t.a;
     }
@@ -20,7 +20,7 @@ int main()
     d2.a = 250;
     // cout << d1.a + d2.a;
     // cout << 58 + 36;
-    d1 + d2;
+    d1 - d2;
     // d1.operator+(d2);
     return 0;
 }
