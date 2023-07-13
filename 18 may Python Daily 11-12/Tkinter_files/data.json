@@ -1,0 +1,23 @@
+{
+    "id": 101,
+    "name": "India",
+    "iso3": "IND",
+    "numeric_code": "356",
+    "iso2": "IN",
+    "phonecode": "91",
+    "capital": "New Delhi",
+    "currency": "INR",
+    "currency_name": "Indian rupee",
+    "currency_symbol": "\u20b9",
+    "tld": ".in",
+    "native": "\u092d\u093e\u0930\u0924",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "timezones":"[{\"zoneName\":\"Asia\/Kolkata\",\"gmtOffset\":19800,\"gmtOffsetName\":\"UTC+05:30\",\"abbreviation\":\"IST\",\"tzName\":\"Indian 
+Standard Time\"}]",
+    "translations": "{\"kr\":\"\uc778\ub3c4\",\"pt-BR\":\"\u00cdndia\",\"pt\":\"\u00cdndia\",\"nl\":\"India\",\"hr\":\"Indija\",\"fa\":\"\u0647\u0646\u062f\",\"de\":\"Indien\",\"es\":\"India\",\"fr\":\"Inde\",\"ja\":\"\u30a4\u30f3\u30c9\",\"it\":\"India\",\"cn\":\"\u5370\u5ea6\",\"tr\":\"Hindistan\"}",
+    "latitude": "20.00000000",
+    "longitude": "77.00000000",
+    "emoji": "\ud83c\uddee\ud83c\uddf3",
+    "emojiU": "U+1F1EE U+1F1F3"
+}
